@@ -1,0 +1,29 @@
+.movie-container {
+  display: inline-block;
+  align-items: center;
+  margin: 60px;
+
+  img {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+  }
+
+  .vote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; 
+
+    button {
+      padding: 5px;
+      cursor: pointer;
+      background-color: lavenderblush;
+    }
+
+    p {
+      color: blue;
+      font-weight: bold;
+    }
+  }
+}
