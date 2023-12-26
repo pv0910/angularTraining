@@ -1,0 +1,23 @@
+<div class="filter-container">
+  <div class="filter-section">
+    <label class="filter-label" for="category">Select Category:</label>
+    <select class="filter-dropdown" id="category" [(ngModel)]="selectedCategory" name="category">
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+
+    <label class="filter-label" for="dueDate">Select Due Date:</label>
+    <input class="filter-date" type="date" id="dueDate" [(ngModel)]="selectedDueDate" name="dueDate">
+
+    <button class="filter-button" type="button" (click)="filterTasks()">Filter Tasks</button>
+  </div>
+  <button class="filter-button" type="button" (click)="sortTasksByDueDate()">Sort Tasks by Due Date</button>
+  <div class="task-list">
+    <div *ngFor="let task of filteredTasks" class="task-item">
+      <div class="task-info">
+        <p class="task-title">{{ task.title }}</p>
+        <p class="task-status">{{ task.completed ? 'Completed' : 'Incomplete' }}</p>
+        <p class="due-date" *ngIf="task.dueDate">Due Date: {{ task.dueDate | date }}</p>
+      </div>
+    </div>
+  </div>
+</div>

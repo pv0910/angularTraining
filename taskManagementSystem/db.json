@@ -1,0 +1,68 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Shopping",
+      "completed": true,
+      "category": "Personal",
+      "dueDate": "2023-12-30",
+      "userId": "Pooja"
+    },
+    {
+      "id": 2,
+      "title": "Coding",
+      "completed": true,
+      "category": "Work",
+      "dueDate": "2023-12-29",
+      "userId": "Pooja"
+    },
+    {
+      "id": 3,
+      "title": "Reading Books",
+      "completed": false,
+      "category": "Personal",
+      "dueDate": "2023-12-30",
+      "userId": "Khushi"
+    },
+    {
+      "id": 4,
+      "title": "Movie",
+      "completed": true,
+      "category": "Personal",
+      "dueDate": "2023-12-20",
+      "userId": "Khushi"
+    },
+    {
+      "id": 6,
+      "title": "Writing Novel",
+      "completed": false,
+      "category": "Work",
+      "dueDate": "2023-12-30",
+      "userId": "Pooja"
+    },
+    {
+      "id": 7,
+      "title": "Do some Changes in Code",
+      "completed": false,
+      "category": "Work",
+      "dueDate": "2023-12-29",
+      "userId": "Khushi"
+    }
+  ],
+  "user": [
+    {
+      "id": "Pooja",
+      "name": "Pooja",
+      "password": "Pooja@9004",
+      "email": "pj@gmail.com",
+      "gender": "female"
+    },
+    {
+      "id": "Khushi",
+      "name": "Khushi",
+      "password": "Khushi@9004",
+      "email": "kv@gmail.com",
+      "gender": "female"
+    }
+  ]
+}

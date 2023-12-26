@@ -1,0 +1,28 @@
+<div class="header">
+  <h1>Task Management System</h1>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <div class="collapse navbar-collapse" id="navbarNav" >
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" > Home </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]= "'active'"  *ngIf="isloggedin()">
+        <a routerLink="/task-list">Task List</a> 
+      </li>
+      <li class="nav-item" [routerLinkActive]= "'active'"  *ngIf="isloggedin()">
+        <a routerLink="/add-task">Add Task</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]= "'active'"  *ngIf="isloggedin()">
+        <a routerLink="/task-filter">Task Filter</a>
+      </li>
+      <form class="d-flex" role="search" style="text-align: end;">
+        <button  *ngIf="isloggedin()" class="btn btn-outline-light" type="submit" routerLink="/login">Logout</button>
+      </form>
+    </ul>
+  </div>
+</nav>
+
+<div class="content" style="width: 100%; display:block;" role="main">
+ <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,21 @@
+<form #taskForm="ngForm" (ngSubmit)="addTask()">
+
+  <label for="title">Title:</label>
+  <input type="text" id="title" [(ngModel)]="taskTitle" name="title" required>
+  
+  <label for="completed">Completed:</label>
+  <input type="checkbox" id="completed" [(ngModel)]="taskCompleted" name="completed">
+  
+  <label for="dueDate">Due Date:</label>
+  <input type="date" id="dueDate" [(ngModel)]="taskDueDate" name="dueDate">
+
+  <label for="category">Category:</label>
+  <select id="category" [(ngModel)]="taskCategory" name="category" required>
+    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+  </select>
+  <small *ngIf="taskForm.invalid && taskForm.touched">Please add title or category</small>
+
+  <br>
+  <button type="submit" [disabled]="!taskForm.valid">Add Task</button>
+</form>
+
