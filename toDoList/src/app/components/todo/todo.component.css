@@ -1,0 +1,43 @@
+.container{
+    margin-top: 50px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.bold-placeholder::placeholder {
+    color: black;
+ }
+.container > h1{
+    text-align: center;
+    text-decoration: underline solid;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+.todo-form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.todo-form input{
+    width: 100%;
+}
+.todo-list li{
+    margin-top: 5px;
+}
+
+.todo-list > li >div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color:lightpink;
+}
+
+.todo-list button{
+    margin-left: 30px;
+
+}
