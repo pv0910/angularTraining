@@ -11,18 +11,18 @@ export class AuthService {
   }
   apiurl='http://localhost:3000/user';
 
-  RegisterUser(inputdata: any) {
+  public RegisterUser(inputdata: any) {
     return this.http.post(this.apiurl, inputdata);
   }
   
-  GetUserbyCode(id: any) {
+  public GetUserbyCode(id: any) {
     return this.http.get(this.apiurl + '/' + id);
   }
-  getUserId(): string {
+  public getUserId(): string {
     return sessionStorage.getItem('username') || '';
     }
    
-  isloggedin(){
+  public isloggedin(){
     return sessionStorage.getItem('username')!=null;
   }
 }

@@ -14,31 +14,31 @@ export class TaskService {
 
   constructor(private http: HttpClient,private authService:AuthService) {}
 
-  getTasks(userId: string): Observable<Task[]> {
+  public getTasks(userId: string): Observable<Task[]> {
     const url = `${this.apiUrl}?userId=${userId}`;
     return this.http.get<Task[]>(url);
   }
 
-  addTask(task: Task): Observable<Task> {
+  public addTask(task: Task): Observable<Task> {
     task.userId = this.authService.getUserId();
     return this.http.post<Task>(this.apiUrl, task);
   }
 
-  updateTask(task: Task): Observable<Task> {
+  public updateTask(task: Task): Observable<Task> {
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.put<Task>(url, task);
   }
 
-  deleteTask(id: number): Observable<void> {
+  public deleteTask(id: number): Observable<void> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete<void>(url);
   }
-  getTasksByCategory(category: string): Observable<Task[]> {
+  public getTasksByCategory(category: string): Observable<Task[]> {
     const url = `${this.apiUrl}?category=${category}`;
     return this.http.get<Task[]>(url);
   }
 
-  getTaskById(id: number): Observable<Task> {
+  public getTaskById(id: number): Observable<Task> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<Task>(url);
   }

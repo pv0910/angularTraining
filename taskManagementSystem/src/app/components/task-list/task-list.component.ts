@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
-  tasks: Task[] = [];
+  public tasks: Task[] = [];
 
   constructor(private taskService: TaskService, private authService: AuthService) {}
 
@@ -17,7 +17,7 @@ export class TaskListComponent implements OnInit {
     this.loadTasks();
   }
 
-  loadTasks(): void {
+  public loadTasks(): void {
     const userId = this.authService.getUserId();
     if (userId) {
       this.taskService.getTasks(userId).subscribe((tasks) => {
@@ -28,7 +28,7 @@ export class TaskListComponent implements OnInit {
     }
   }
 
-  deleteTask(id: number): void {
+  public deleteTask(id: number): void {
     const task = this.tasks.find((t) => t.id === id);
     if (task && task.userId === this.authService.getUserId()) {
       this.taskService.deleteTask(id).subscribe(() => {

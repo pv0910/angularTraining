@@ -9,8 +9,8 @@ import { TaskService } from '../../services/task.service';
   styleUrls: ['./edit-task.component.css'],
 })
 export class EditTaskComponent implements OnInit {
-  taskId: number | undefined;
-  task: Task | undefined;
+  public taskId: number | undefined;
+  public task: Task | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,7 +27,7 @@ export class EditTaskComponent implements OnInit {
     });
   }
 
-  updateTask(): void {
+  public updateTask(): void {
     if (this.task) {
       this.taskService.updateTask(this.task).subscribe(() => {
         this.router.navigate(['/task-list']); 

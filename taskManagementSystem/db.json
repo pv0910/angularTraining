@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "Coding",
-      "completed": true,
+      "completed": false,
       "category": "Work",
       "dueDate": "2023-12-29",
       "userId": "Pooja"
@@ -35,7 +35,7 @@
     {
       "id": 6,
       "title": "Writing Novel",
-      "completed": false,
+      "completed": true,
       "category": "Work",
       "dueDate": "2023-12-30",
       "userId": "Pooja"
@@ -47,6 +47,14 @@
       "category": "Work",
       "dueDate": "2023-12-29",
       "userId": "Khushi"
+    },
+    {
+      "id": 8,
+      "title": "Go to Market",
+      "completed": false,
+      "category": "Personal",
+      "dueDate": "2024-01-06",
+      "userId": "Pooja"
     }
   ],
   "user": [

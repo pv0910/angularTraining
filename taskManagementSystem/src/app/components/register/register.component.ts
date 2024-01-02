@@ -20,7 +20,7 @@ export class RegisterComponent {
     email: this.builder.control('', Validators.compose([Validators.required, Validators.email])),
     gender: this.builder.control('male'),
   });
-  proceedregister() {
+  public proceedregister() {
     if (this.registerform.valid) {
       this.service.RegisterUser(this.registerform.value).subscribe(result => {
         this.toastr.success('Registered successfully');

@@ -9,10 +9,10 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./add-task.component.css'],
 })
 export class AddTaskComponent {
-  taskTitle = '';
-  taskCompleted = false;
-  taskDueDate: Date | null = null;
-  taskCategory = '';
+  public taskTitle = '';
+  public taskCompleted = false;
+  public taskDueDate: Date | null = null;
+  public taskCategory = '';
 
   categories = ['Personal', 'Work'];
 
@@ -22,7 +22,7 @@ export class AddTaskComponent {
     private authService: AuthService
   ) {}
 
-  addTask(): void {
+  public addTask(): void {
     const userId = this.authService.getUserId();
     this.taskService
       .addTask({

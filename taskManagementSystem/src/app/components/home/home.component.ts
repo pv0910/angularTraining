@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   constructor(private router: Router) {}
-  isloggedin(){
+  public isloggedin(){
     return sessionStorage.getItem('username')!=null;
   }
 }

@@ -9,11 +9,11 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./task-filter.component.css'],
 })
 export class TaskFilterComponent implements OnInit {
-  tasks: Task[] = [];
-  filteredTasks: Task[] = [];
-  selectedCategory = '';
-  categories: string[] = ['All', 'Work', 'Personal'];
-  selectedDueDate: Date | undefined;
+  public tasks: Task[] = [];
+  public filteredTasks: Task[] = [];
+  public selectedCategory = '';
+  public categories: string[] = ['All', 'Work', 'Personal'];
+  public selectedDueDate: Date | undefined;
 
   constructor(private taskService: TaskService, private authService: AuthService) {}
 
@@ -21,7 +21,7 @@ export class TaskFilterComponent implements OnInit {
     this.loadTasks();
   }
 
-  loadTasks(): void {
+  public loadTasks(): void {
     const userId = this.authService.getUserId();
     if (userId) {
       this.taskService.getTasks(userId).subscribe((tasks) => {
@@ -33,11 +33,11 @@ export class TaskFilterComponent implements OnInit {
     }
   }
 
-  filterTasks(): void {
+  public filterTasks(): void {
     this.applyFilters();
   }
 
-  sortTasksByDueDate(): void {
+  public sortTasksByDueDate(): void {
     this.filteredTasks.sort((a, b) => {
       if (a.dueDate && b.dueDate) {
         return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isloggedin() {
+  public isloggedin() {
     return sessionStorage.getItem('username') != null;
   }
   }
